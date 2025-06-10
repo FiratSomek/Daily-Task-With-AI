@@ -1,5 +1,9 @@
-import Image from "next/image";
-
 export default function Home() {
-  return <div>Daily Tasks</div>;
+  return (
+    <div>
+      <div>
+        <h1>AI Prompt Generator</h1>
+      </div>
+    </div>
+  );
 }
