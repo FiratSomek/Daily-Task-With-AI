@@ -1,9 +1,12 @@
+import Dashboard from "./pages/Dashboard/page";
+
 export default function Home() {
   return (
     <div>
-      <div>
+      {/* <div className="">
         <h1>AI Prompt Generator</h1>
-      </div>
+        <button className="border-2 p-2 font-bold">Log In</button>
+      </div> */}
     </div>
   );
 }
