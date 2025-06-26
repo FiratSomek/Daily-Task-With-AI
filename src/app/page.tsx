@@ -1,13 +1,14 @@
 "use client";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import Link from "next/link";
+import Login from "./components/Login";
 
 export default function Home() {
-  const { user, error, isLoading } = useUser();
+  // const { user, error, isLoading } = useUser();
 
   return (
     <div>
-      <div className="">
+      {/* <div className="">
         <h1>AI Prompt Generator</h1>
         {!user ? (
           <Link href="/api/auth/login">
@@ -21,6 +22,9 @@ export default function Home() {
             </Link>
           </>
         )}
+      </div> */}
+      <div>
+        <Login />
       </div>
     </div>
   );
