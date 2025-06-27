@@ -23,7 +23,7 @@ export default function Home() {
           </>
         )}
       </div> */}
-      <div>
+      <div className="flex align-center justify-center">
         <Login />
       </div>
     </div>
