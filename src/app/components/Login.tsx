@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Login = () => {
@@ -24,14 +25,12 @@ const Login = () => {
           />
         </label>
       </div>
-      <button
-        className=" rounded-3xl p-1 font-bold text-white bg-blue-500 cursor-pointer mt-5
-
-
-"
-      >
-        LOGIN
-      </button>
+      <Link href="/dashboard">
+        {" "}
+        <button className=" rounded-3xl p-1 font-bold text-white bg-blue-500 cursor-pointer mt-5">
+          LOGIN
+        </button>
+      </Link>
     </div>
   );
 };
