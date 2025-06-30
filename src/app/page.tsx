@@ -1,7 +1,6 @@
 "use client";
-import { useUser } from "@auth0/nextjs-auth0/client";
-import Link from "next/link";
-import Login from "./components/Login";
+
+import Login from "./components/LoginPage/index";
 
 export default function Home() {
   // const { user, error, isLoading } = useUser();
