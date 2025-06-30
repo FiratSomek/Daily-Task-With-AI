@@ -30,6 +30,7 @@ const PromptForm = () => {
         rows={5}
         placeholder="Type your prompt here..."
       />
+      {error && <p className="text-red-500 text-sm">{error}</p>}
       <button
         type="submit"
         className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
