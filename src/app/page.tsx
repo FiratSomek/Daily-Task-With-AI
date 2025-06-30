@@ -1,6 +1,6 @@
 "use client";
 
-import Login from "./components/LoginPage/index";
+import Login from "./components/LoginPage";
 
 export default function Home() {
   // const { user, error, isLoading } = useUser();
