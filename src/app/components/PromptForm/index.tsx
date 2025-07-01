@@ -1,7 +1,11 @@
 "use client";
 import React, { useState } from "react";
 
-const PromptForm = () => {
+type PromptFormProps = {
+  onSubmit: (value: string) => void;
+};
+
+const PromptForm = ({ onSubmit }: PromptFormProps) => {
   const [prompt, setPrompt] = useState("");
   const [error, setError] = useState("");
   const handleSubmit = (e: React.FormEvent) => {
@@ -12,6 +16,7 @@ const PromptForm = () => {
       return;
     }
     setError("");
+    onSubmit(prompt);
     setPrompt("");
   };
   return (
