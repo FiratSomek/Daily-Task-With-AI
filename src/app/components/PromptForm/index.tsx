@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 
 type PromptFormProps = {
@@ -10,6 +11,7 @@ const PromptForm = ({ onSubmit }: PromptFormProps) => {
   const [error, setError] = useState("");
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log(prompt);
 
     if (!prompt.trim()) {
       setError("Prompt cannot be empty!");
@@ -36,12 +38,14 @@ const PromptForm = ({ onSubmit }: PromptFormProps) => {
         placeholder="Type your prompt here..."
       />
       {error && <p className="text-red-500 text-sm">{error}</p>}
+      {/* <Link href="/ai"> */}
       <button
         type="submit"
         className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
       >
         Send
       </button>
+      {/* </Link> */}
     </form>
   );
 };

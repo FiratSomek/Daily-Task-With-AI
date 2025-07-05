@@ -1,5 +1,6 @@
 import { UserProvider } from "@auth0/nextjs-auth0/client";
 import "./globals.css";
+import { Providers } from "../../store/providers";
 
 export default function RootLayout({
   children,
@@ -9,7 +10,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <UserProvider> */}
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
       {/* </UserProvider> */}
     </html>
   );
