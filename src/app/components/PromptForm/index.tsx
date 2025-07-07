@@ -3,22 +3,24 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../../../store";
 import { setPrompt } from "../../../../store/promptSlice";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const PromptForm = () => {
   const [promptInput, setPromptInput] = useState("");
   const [error, setError] = useState("");
   const dispatch = useDispatch<AppDispatch>();
+  const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!promptInput.trim()) {
       setError("Prompt cannot be empty!");
       return;
     }
     dispatch(setPrompt(promptInput));
+    setPromptInput("");
     setError("");
+    router.push("ai");
   };
   return (
     <form
@@ -37,14 +39,13 @@ const PromptForm = () => {
         placeholder="Type your prompt here..."
       />
       {error && <p className="text-red-500 text-sm">{error}</p>}
-      <Link href="/ai">
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-        >
-          Send
-        </button>
-      </Link>
+
+      <button
+        type="submit"
+        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+      >
+        Send
+      </button>
     </form>
   );
 };
