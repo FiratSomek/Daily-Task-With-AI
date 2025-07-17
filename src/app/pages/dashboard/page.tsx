@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../components/Header";
-import PromptForm from "../components/PromptForm";
-import TaskList from "../components/TaskList";
+import Header from "../../components/Header";
+import PromptForm from "../../components/PromptForm";
+import TaskList from "../../components/TaskList";
 
 const Dashboard = () => {
   return (
