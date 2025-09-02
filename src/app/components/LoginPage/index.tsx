@@ -25,7 +25,7 @@ const Login = () => {
           />
         </label>
       </div>
-      <Link href="/dashboard">
+      <Link href="/pages/dashboard">
         {" "}
         <button className=" rounded-3xl p-1 font-bold text-white bg-blue-500 cursor-pointer mt-5">
           LOGIN

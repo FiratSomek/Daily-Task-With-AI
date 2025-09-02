@@ -2,25 +2,27 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../../store";
+import Link from "next/link";
 
 const TaskList = () => {
-  const [promptList, setPromptList] = useState<string[]>([]);
-  const prompt = useSelector((state: RootState) => state.prompt.value);
-  useEffect(() => {
-    if (prompt && !promptList.includes(prompt)) {
-      setPromptList((prevList) => [...prevList, prompt]);
-    }
-  }, [prompt]);
   return (
     <div className="bg-white shadow-md rounded-lg p-4 max-w-md mx-auto">
-      <h2 className="text-xl font-semibold mb-4">Task List</h2>
-      <ul className="list-disc list-inside space-y-2">
-        {promptList.map((item, index) => (
-          <li key={index} className="text-gray-700">
-            {item}
-          </li>
-        ))}
-      </ul>
+      <form>
+        <textarea
+          name=""
+          id=""
+          className="w-full border border-gray-300 rounded-md resize-none p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 "
+          rows={2}
+        ></textarea>
+      </form>
+      <h2 className="text-xl font-semibold mb-4 text-center">Task List</h2>
+      <Link href="/pages/ai">
+        <div className="text-center">
+          <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+            AI sayfasına git
+          </button>
+        </div>
+      </Link>
     </div>
   );
 };

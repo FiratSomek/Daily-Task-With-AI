@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../../../store";
 import { setPrompt } from "../../../../store/promptSlice";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const PromptForm = () => {
   const [promptInput, setPromptInput] = useState("");
@@ -39,18 +40,17 @@ const PromptForm = () => {
         placeholder="Type your prompt here..."
       />
       {error && <p className="text-red-500 text-sm">{error}</p>}
-
+      {/* <Link href="/pages/dashboard">
+        {" "} */}
       <button
         type="submit"
         className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
       >
         Send
       </button>
+      {/* </Link> */}
     </form>
   );
 };
 
 export default PromptForm;
-function dispatch(arg0: void) {
-  throw new Error("Function not implemented.");
-}

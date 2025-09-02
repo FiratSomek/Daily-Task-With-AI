@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { CiMenuBurger, CiSettings, CiUser } from "react-icons/ci";
 
@@ -33,9 +34,11 @@ export default function Header() {
               <li className="px-4 py-2 hover:bg-gray-100 flex items-center gap-2">
                 <CiSettings className="w-4 h-4" /> Ayarlar
               </li>
-              <li className="px-4 py-2 hover:bg-gray-100 text-red-500">
-                Çıkış Yap
-              </li>
+              <Link href="/">
+                <li className="px-4 py-2 hover:bg-gray-100 text-red-500">
+                  Çıkış Yap
+                </li>
+              </Link>
             </ul>
           </div>
         )}
