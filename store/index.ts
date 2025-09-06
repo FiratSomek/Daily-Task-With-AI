@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import promptReducer from "./promptSlice";
+import promptReducer from "./features/prompts/promptSlice";
 
 export const store = configureStore({
   reducer: {

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../../../store";
-import { setPrompt } from "../../../../store/promptSlice";
+import { setPrompt } from "../../../../store/features/prompts/promptSlice";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
