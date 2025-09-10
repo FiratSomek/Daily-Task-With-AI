@@ -7,7 +7,6 @@ const Dashboard = () => {
   return (
     <div>
       <Header />
-      <TaskList />
     </div>
   );
 };

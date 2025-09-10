@@ -1,15 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "../../../../store";
 import { setPrompt } from "../../../../store/features/prompts/promptSlice";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
+import { useAppDispatch, useAppSelector } from "../../../../store/hooks";
 
 const PromptForm = () => {
   const [promptInput, setPromptInput] = useState("");
   const [error, setError] = useState("");
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useAppDispatch();
+
   const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
