@@ -19,10 +19,15 @@ const TaskList = () => {
         {tasks.map((task) => (
           <li
             key={task.id}
-            className="flex justify-between items-center border-b pb-1"
+            className="flex justify-between items-center m-5 p-3  border"
           >
             <span>{task.text}</span>
-            <button onClick={() => handleRemove(task.id)}>Remove</button>
+            <button
+              onClick={() => handleRemove(task.id)}
+              className="text-red-500 hover:text-red-700"
+            >
+              Remove
+            </button>
           </li>
         ))}
       </ul>
