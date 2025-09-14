@@ -10,8 +10,8 @@ const TaskList = () => {
     dispatch(removeTask(id));
   };
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 max-w-md mx-auto space-y-4">
-      <h1 className="text-xl font-semibold text-center">Task List</h1>
+    <div className="w-full bg-white shadow-md rounded-lg mt-10 p-4 max-w-2xl mx-auto space-y-4">
+      <h1 className="text-2xl font-semibold text-center">Task List</h1>
       {tasks.length === 0 && (
         <p className="text-gray-500 text-center">No Task Yet..</p>
       )}
@@ -19,9 +19,11 @@ const TaskList = () => {
         {tasks.map((task) => (
           <li
             key={task.id}
-            className="flex justify-between items-center m-5 p-3  border"
+            className="flex justify-between items-center m-5 p-3 border sborder-gray-300 rounded-md"
           >
-            <span>{task.text}</span>
+            <span className="tracking-wider font-mono bold break-words whitespace-normal max-w-[80%]">
+              {task.text}
+            </span>
             <button
               onClick={() => handleRemove(task.id)}
               className="text-red-500 hover:text-red-700"

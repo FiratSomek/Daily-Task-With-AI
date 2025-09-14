@@ -34,6 +34,9 @@ const Login = () => {
       <Link href="/pages/ai">
         <button>ai page</button>
       </Link>
+      <Link href="/pages/taskpage">
+        <button>taskpage</button>
+      </Link>
     </div>
   );
 };

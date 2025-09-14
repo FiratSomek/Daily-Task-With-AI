@@ -17,14 +17,13 @@ const TaskForm = () => {
     }
   };
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 max-w-md mx-auto space-y-4">
+    <div className="w-full bg-white shadow-lg rounded-lg p-10 mt-10 max-w-2xl mx-auto space-y-4">
       <form onSubmit={handleSubmit}>
-        <textarea
+        <input
           id="task"
           value={taskInput}
           onChange={(e) => setTaskInput(e.target.value)}
-          className="w-full border border-gray-300 rounded-md resize-none p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          rows={3}
+          className="w-full border border-gray-300 rounded-md resize-none mb-5 p-2 focus:outline-none focus:ring-1 focus:ring-dark-500"
           placeholder="Type your task here..."
         />
         <button
